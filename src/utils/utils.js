@@ -5,3 +5,7 @@ export const scrollToTop = () => {
 export const setPageTitle = (currentPage) => {
     document.title = `Reminisce Visuals - ${currentPage}`;
 }
+
+export const scrollTo = (ref) => {
+    ref.current?.scrollIntoView();
+}

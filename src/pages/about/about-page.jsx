@@ -25,10 +25,10 @@ const AboutPage = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar currentPage="about"/>
             <HeroSection backgroundImage={require("../../images/about_bg.png")} contents={contents} align="start"/>
             <StorySection />
-            <Footer />
+            <Footer currentPage="about"/>
         </>
     )
 }

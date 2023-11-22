@@ -75,6 +75,10 @@
     list-style: none;
 }
 
+.bottom li a.active {
+    border-bottom: 2px solid #ffffff;
+}
+
 .bottom a {
     color: #ffffff;
     margin: 0 20px;

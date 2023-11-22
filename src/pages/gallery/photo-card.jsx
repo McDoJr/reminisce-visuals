@@ -6,8 +6,8 @@ const PhotoCard = ({title, backgroundImage, index}) => {
     const navigate = useNavigate();
 
     return (
-        <section className={styles.container} style={{backgroundImage: `url(${backgroundImage})`}}>
-            <div onClick={() => navigate("/services", {state:{index: index}})}>{title}</div>
+        <section className={styles.container} onClick={() => navigate("/services", {state:{index: index}})} style={{backgroundImage: `url(${backgroundImage})`}}>
+            <div>{title}</div>
         </section>
     )
 }

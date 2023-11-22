@@ -21,10 +21,10 @@ const HomePage = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar currentPage="home"/>
             <HeroSection backgroundImage={require("../../images/home_bg.png")} contents={contents} align="center"/>
             <AboutSection />
-            <Footer />
+            <Footer currentPage="home"/>
         </>
     )
 }

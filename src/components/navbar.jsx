@@ -3,7 +3,12 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({currentPage}) => {
+
+    const getClassName = (name) => {
+        return name === currentPage ? styles.active : '';
+    }
+
     return (
         <section className={styles.container}>
             <div className={styles.top}>
@@ -23,11 +28,12 @@ const Navbar = () => {
             </div>
             <div className={styles.bottom}>
                 <ul>
-                    <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/gallery">Gallery</Link></li>
-                    <li><Link to="/book">Book Us</Link></li>
+                    <li><Link to="/home" className={getClassName("home")}>Home</Link></li>
+                    <li><Link to="/about" className={getClassName("about")}>About</Link></li>
+                    <li><Link to="/services" className={getClassName("services")}>Services</Link></li>
+                    <li><Link to="/gallery" className={getClassName("gallery")}>Gallery</Link></li>
+                    <li><Link to="/book" className={getClassName("book")}>Book Us</Link></li>
+                    <li><Link to="/pricing" className={getClassName("pricing")}>Picing</Link></li>
                 </ul>
             </div>
         </section>

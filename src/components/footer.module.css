@@ -63,6 +63,7 @@
 .right .row a {
     font-size: 18px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .right .row:nth-last-child(2) span {

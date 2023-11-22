@@ -2,7 +2,7 @@ import Navbar from "../../components/navbar.jsx";
 import HeroSection from "../../components/hero-section.jsx";
 import Footer from "../../components/footer.jsx";
 import {useEffect} from "react";
-import {scrollToTop, setPageTitle} from "../../utils/utils.js";
+import {scrollTo, scrollToTop, setPageTitle} from "../../utils/utils.js";
 import BookSection from "./book-section.jsx";
 import OfferSection from "./offer-section.jsx";
 
@@ -27,11 +27,11 @@ const BookPage = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar currentPage="book"/>
             <HeroSection backgroundImage={require("../../images/book_bg.png")} contents={contents} align="end" />
-            <BookSection />
+            <BookSection/>
             <OfferSection/>
-            <Footer />
+            <Footer currentPage="book"/>
         </>
     )
 }

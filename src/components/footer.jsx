@@ -1,8 +1,21 @@
 import styles from "./footer.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
+import {scrollToTop} from "../utils/utils.js";
 
-const Footer = () => {
+const Footer = ({currentPage}) => {
+
+    const navigate = useNavigate();
+
+    const handleClick = (name, url) => {
+        if(name === currentPage) {
+            scrollToTop();
+        }else{
+            navigate(url);
+        }
+    }
+
     return (
         <section className={styles.container}>
             <div className={styles.left}>
@@ -16,10 +29,12 @@ const Footer = () => {
             </div>
             <div className={styles.right}>
                 <div className={styles.row}>
-                    <a>Home</a>
-                    <a>About</a>
-                    <a>Services</a>
-                    <a>Book Us</a>
+                    <a onClick={() => handleClick("home", "/home")}>Home</a>
+                    <a onClick={() => handleClick("about", "/about")}>About</a>
+                    <a onClick={() => handleClick("services", "/services")}>Services</a>
+                    <a onClick={() => handleClick("gallery", "/gallery")}>Gallery</a>
+                    <a onClick={() => handleClick("book", "/book")}>Book Us</a>
+                    <a onClick={() => handleClick("pricing", "/pricing")}>Pricing</a>
                 </div>
                 <div className={styles.row}>
                     <span>Fb</span>

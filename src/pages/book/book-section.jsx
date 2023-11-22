@@ -1,8 +1,12 @@
 import styles from "./book-section.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faLocationDot, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
 
 const BookSection = () => {
+
+    const navigate = useNavigate();
+
     return (
         <section className={styles.container}>
             <h1>MAKE SURE TO FIND US</h1>
@@ -34,7 +38,7 @@ const BookSection = () => {
                         <input type="text" placeholder="Subject *" name="subject"/>
                         <textarea name="message" placeholder="Your Message *"></textarea>
                     </div>
-                    <button>SEND MESSAGE</button>
+                    <button onClick={() => navigate("/gcash")}>SEND MESSAGE</button>
                 </form>
             </div>
         </section>

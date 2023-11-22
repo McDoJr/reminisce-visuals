@@ -70,7 +70,7 @@ const ServicesPage = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar currentPage="services"/>
             {selectedService ?
                 <ServiceCard heading={selectedService.heading} photos={selectedService.photos} handleClick={handleClick}/> :
                 <>
@@ -78,7 +78,7 @@ const ServicesPage = () => {
                     <ServicesSection services={services} handleClick={handleClick}/>
                 </>
             }
-            <Footer />
+            <Footer currentPage="services"/>
         </>
     )
 }
